@@ -213,8 +213,8 @@ impl OpenGLContext {
                 let builder = glutin::ContextBuilder::new().with_vsync(true);
 
                 // With latest Windows 10 and VmWare glutin's default for srgb produces surfaces that are always rendered black :(
-                #[cfg(target_os = "windows")]
-                let builder = builder.with_srgb(false);
+                //#[cfg(target_os = "windows")]
+                //let builder = builder.with_srgb(false);
 
                 builder.build_windowed(window_builder, event_loop.event_loop_target()).unwrap()
             });
